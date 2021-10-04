@@ -8,10 +8,24 @@
     <link rel="stylesheet" href="./index.css" />
   </head>
   <body>
-    <h1 class="title">Random Pokedex</h1>
+    <h1 class="title">Pokedex</h1>
     <div class="pokemon-container"></div>
-    <!-- <button id="againButton">Again</button> -->
-    <p><input id="againButton" type="button" value="Refresh" onClick="refresh(this)"></p>
+    <div class="botton-container">
+      <p>
+        <input
+          class="againButton"
+          type="button"
+          value="Start"
+          onClick="refresh(this)"
+        />
+      </p>
+      <p>
+        <input class="againButton" id="previous" type="button" value="Previous Page"/>
+      </p>
+      <p>
+        <input class="againButton" id="next" type="button" value="Next Page"/>
+      </p>
+    </div>
     <script src="./index.js"></script>
   </body>
 </html>
