@@ -40,7 +40,7 @@ h1 {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 30px;
-    width: 100%;
+    width: 80%;
     margin: 10px auto;
     height: auto;
   }
