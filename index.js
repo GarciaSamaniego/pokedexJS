@@ -1,6 +1,7 @@
-const pokemonContainer = document.querySelector('.pokemon-container');
+const pokemonContainer = document.querySelector(".pokemon-container");
 const previous = document.querySelector("#previous");
 const next = document.querySelector("#next");
+// const pokeSearch = document.querySelector("#pokeSearch");
 let offset = 1;
 let limit = 2;
 
@@ -18,6 +19,12 @@ next.addEventListener("click", () => {
   fetchPokemons(offset, limit);
 });
 
+const searchPokemon = event => {
+  event.preventDefault();
+  const { value } = event.target.pokemon;
+  removeChildNodes(pokemonContainer);
+  fetchPokemon(value.toLowerCase());
+}
 
 function fetchPokemon(id) {
   fetch(`https://pokeapi.co/api/v2/pokemon/${id}/`)
@@ -33,44 +40,60 @@ function fetchPokemons(offset, limit) {
   }
 }
 
-function refresh(){
-  window.location.reload("Refresh")
+function refresh() {
+  window.location.reload("Refresh");
 }
 function nextPage() {
-  fetchPokemon()
+  fetchPokemon();
 }
 
 function createPokemon(pokemon) {
-  const card = document.createElement('div');
-  card.classList.add('pokemon-block');
+  const card = document.createElement("div");
+  card.classList.add("pokemon-block");
 
-  const spriteContainer = document.createElement('div');
-  spriteContainer.classList.add('img-container');
+  const spriteContainer = document.createElement("div");
+  spriteContainer.classList.add("img-container");
 
-  const sprite = document.createElement('img');
+  const sprite = document.createElement("img");
   sprite.src = pokemon.sprites.front_default;
 
   spriteContainer.appendChild(sprite);
 
-  const number = document.createElement('p');
+  const number = document.createElement("p");
   number.textContent = `#${pokemon.id.toString().padStart(3, 0)}`;
 
-  const name = document.createElement('p');
-  name.classList.add('name');
+  const name = document.createElement("p");
+  name.classList.add("name");
   name.textContent = pokemon.name;
 
-  
+  const typeContainer = document.createElement('div')
+  typeContainer.classList.add("iconContainer");
+
+  const pokemonType = document.createElement("img");
+  pokemonType.classList.add(`${pokemon.types[0].type.name}`, "icon");
+
   card.appendChild(spriteContainer);
   card.appendChild(number);
   card.appendChild(name);
+  card.appendChild(typeContainer);
+  typeContainer.appendChild(pokemonType);
+  pokemonContainer.appendChild(card);
+  
+  if (pokemon.types[1] === undefined) {
+    console.log('No tiene otro tipo');
+  } else {
+    const pokemonType2 = document.createElement("img");
+    pokemonType2.classList.add(`${pokemon.types[1].type.name}`, "icon");
+    typeContainer.appendChild(pokemonType2);
+  }
 
-  for (let k = 0; k<= 6; k++){
-    const stats = document.createElement('p')
-    stats.classList.add('stats');
+  for (let k = 0; k <= 6; k++) {
+    const stats = document.createElement("p");
+    stats.classList.add("stats");
     stats.textContent = `${pokemon.stats[k].stat.name}: ${pokemon.stats[k].base_stat}`;
     card.appendChild(stats);
-    pokemonContainer.appendChild(card);
   }
+
 }
 
 function removeChildNodes(parent) {

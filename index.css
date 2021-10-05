@@ -14,6 +14,15 @@ h1 {
   width: 100%;
   height: auto;
 }
+#pokeSearch {
+  text-align: center;
+  width: 50%;
+  border-radius: 10px;
+  padding: 10px;
+  margin: 30px 30px;
+  background-color: white;
+  box-shadow: 0 3px 15px rgba(100, 100, 100, 0.5);
+}
 .img-container {
   background-image: url("./src/blob.svg");
   background-repeat: no-repeat;
@@ -64,11 +73,91 @@ h1 {
   width: auto;
   height: 40px;
 }
-.botton-container{
+footer {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 10px;
   width: auto;
   margin: 5px auto;
   height: 10vh;
+}
+
+/* Estilos para colocar el icono del tipo de cada pokemon*/
+.typeContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 30px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.grass {
+  background-image: url(/src/typesIcons/Grasstype.ico);
+}
+.fire {
+  background-image: url(/src/typesIcons/Firetype.ico);
+}
+.water {
+  background-image: url(/src/typesIcons/Watertype.ico);
+}
+.animal {
+  background-image: url(/src/typesIcons/Animaltype.ico);
+}
+.bug {
+  background-image: url(/src/typesIcons/Bugtype.ico);
+}
+.dark {
+  background-image: url(/src/typesIcons/Darktype.ico);
+}
+.dragon {
+  background-image: url(/src/typesIcons/Dragontype.ico);
+}
+.electric {
+  background-image: url(/src/typesIcons/Electrictype.ico);
+}
+.fairy {
+  background-image: url(/src/typesIcons/Fairytype.ico);
+}
+.fighting {
+  background-image: url(/src/typesIcons/Fightingtype.ico);
+}
+.flying {
+  background-image: url(/src/typesIcons/Flyingtype.ico);
+}
+.ghost {
+  background-image: url(/src/typesIcons/Ghosttype.ico);
+}
+.ground {
+  background-image: url(/src/typesIcons/Groundtype.ico);
+}
+.ice {
+  background-image: url(/src/typesIcons/Icetype.ico);
+}
+.normal {
+  background-image: url(/src/typesIcons/Normaltype.ico);
+}
+.poison {
+  background-image: url(/src/typesIcons/Poisontype.ico);
+}
+.psychic {
+  background-image: url(/src/typesIcons/Psychictype.ico);
+}
+.rock {
+  background-image: url(/src/typesIcons/Rocktype.ico);
+}
+.sand {
+  background-image: url(/src/typesIcons/Sandtype.ico);
+}
+.sound {
+  background-image: url(/src/typesIcons/Soundtype.ico);
+}
+.speed {
+  background-image: url(/src/typesIcons/Speedytype.ico);
+}
+.steel {
+  background-image: url(/src/typesIcons/Steeltype.ico);
 }

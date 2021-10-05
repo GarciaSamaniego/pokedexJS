@@ -8,9 +8,16 @@
     <link rel="stylesheet" href="./index.css" />
   </head>
   <body>
-    <h1 class="title">Pokedex</h1>
-    <div class="pokemon-container"></div>
-    <div class="botton-container">
+    <header>
+      <h1 class="title">Pokedex</h1>
+      <form action="" onsubmit="searchPokemon(event)">
+        <input id="pokeSearch" type="text" name="pokemon" autocomplete="off" placeholder="Buscar por Nombre o #" />
+      </form>
+    </header>
+    <main>
+      <div class="pokemon-container"></div>
+    </main>
+    <footer>
       <p>
         <input
           class="againButton"
@@ -20,12 +27,17 @@
         />
       </p>
       <p>
-        <input class="againButton" id="previous" type="button" value="Previous Page"/>
+        <input
+          class="againButton"
+          id="previous"
+          type="button"
+          value="Previous Page"
+        />
       </p>
       <p>
-        <input class="againButton" id="next" type="button" value="Next Page"/>
+        <input class="againButton" id="next" type="button" value="Next Page" />
       </p>
-    </div>
+    </footer>
     <script src="./index.js"></script>
   </body>
 </html>
