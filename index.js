@@ -69,7 +69,7 @@ function createPokemon(pokemon) {
   const typeContainer = document.createElement('div')
   typeContainer.classList.add("iconContainer");
 
-  const pokemonType = document.createElement("img");
+  const pokemonType = document.createElement("div");
   pokemonType.classList.add(`${pokemon.types[0].type.name}`, "icon");
 
   card.appendChild(spriteContainer);
@@ -82,7 +82,7 @@ function createPokemon(pokemon) {
   if (pokemon.types[1] === undefined) {
     console.log('No tiene otro tipo');
   } else {
-    const pokemonType2 = document.createElement("img");
+    const pokemonType2 = document.createElement("div");
     pokemonType2.classList.add(`${pokemon.types[1].type.name}`, "icon");
     typeContainer.appendChild(pokemonType2);
   }
