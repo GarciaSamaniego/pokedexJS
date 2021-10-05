@@ -90,74 +90,74 @@ footer {
 .icon {
   width: 40px;
   height: 40px;
-  border-radius: 30px;
+  border-radius: 20px;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
 }
 .grass {
-  background-image: url(/src/typesIcons/Grasstype.ico);
+  background-image: url(/src/typesIcon/Grasstype.ico);
 }
 .fire {
-  background-image: url(/src/typesIcons/Firetype.ico);
+  background-image: url(/src/typesIcon/Firetype.ico);
 }
 .water {
-  background-image: url(/src/typesIcons/Watertype.ico);
+  background-image: url(/src/typesIcon/Watertype.ico);
 }
 .animal {
-  background-image: url(/src/typesIcons/Animaltype.ico);
+  background-image: url(/src/typesIcon/Animaltype.ico);
 }
 .bug {
-  background-image: url(/src/typesIcons/Bugtype.ico);
+  background-image: url(/src/typesIcon/Bugtype.ico);
 }
 .dark {
-  background-image: url(/src/typesIcons/Darktype.ico);
+  background-image: url(/src/typesIcon/Darktype.ico);
 }
 .dragon {
-  background-image: url(/src/typesIcons/Dragontype.ico);
+  background-image: url(/src/typesIcon/Dragontype.ico);
 }
 .electric {
-  background-image: url(/src/typesIcons/Electrictype.ico);
+  background-image: url(/src/typesIcon/Electrictype.ico);
 }
 .fairy {
-  background-image: url(/src/typesIcons/Fairytype.ico);
+  background-image: url(/src/typesIcon/Fairytype.ico);
 }
 .fighting {
-  background-image: url(/src/typesIcons/Fightingtype.ico);
+  background-image: url(/src/typesIcon/Fightingtype.ico);
 }
 .flying {
-  background-image: url(/src/typesIcons/Flyingtype.ico);
+  background-image: url(/src/typesIcon/Flyingtype.ico);
 }
 .ghost {
-  background-image: url(/src/typesIcons/Ghosttype.ico);
+  background-image: url(/src/typesIcon/Ghosttype.ico);
 }
 .ground {
-  background-image: url(/src/typesIcons/Groundtype.ico);
+  background-image: url(/src/typesIcon/Groundtype.ico);
 }
 .ice {
-  background-image: url(/src/typesIcons/Icetype.ico);
+  background-image: url(/src/typesIcon/Icetype.ico);
 }
 .normal {
-  background-image: url(/src/typesIcons/Normaltype.ico);
+  background-image: url(/src/typesIcon/Normaltype.ico);
 }
 .poison {
-  background-image: url(/src/typesIcons/Poisontype.ico);
+  background-image: url(/src/typesIcon/Poisontype.ico);
 }
 .psychic {
-  background-image: url(/src/typesIcons/Psychictype.ico);
+  background-image: url(/src/typesIcon/Psychictype.ico);
 }
 .rock {
-  background-image: url(/src/typesIcons/Rocktype.ico);
+  background-image: url(/src/typesIcon/Rocktype.ico);
 }
 .sand {
-  background-image: url(/src/typesIcons/Sandtype.ico);
+  background-image: url(/src/typesIcon/Sandtype.ico);
 }
 .sound {
-  background-image: url(/src/typesIcons/Soundtype.ico);
+  background-image: url(/src/typesIcon/Soundtype.ico);
 }
 .speed {
-  background-image: url(/src/typesIcons/Speedytype.ico);
+  background-image: url(/src/typesIcon/Speedytype.ico);
 }
 .steel {
-  background-image: url(/src/typesIcons/Steeltype.ico);
+  background-image: url(/src/typesIcon/Steeltype.ico);
 }
