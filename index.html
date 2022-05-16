@@ -8,36 +8,53 @@
     <link rel="stylesheet" href="./index.css" />
   </head>
   <body>
-    <header>
-      <h1 class="title">Pokedex</h1>
-      <form action="" onsubmit="searchPokemon(event)">
-        <input id="pokeSearch" type="text" name="pokemon" autocomplete="off" placeholder="Buscar por Nombre o #" />
-      </form>
-    </header>
     <main>
-      <div class="pokemon-container"></div>
+      <div class="glass">
+        <h1 class="title">Pokedex</h1>
+        <form action="" onsubmit="searchPokemon(event)">
+          <input
+            id="pokeSearch"
+            type="text"
+            name="pokemon"
+            autocomplete="off"
+            placeholder="Buscar por Nombre o #"
+          />
+        </form>
+        <div class="pokemon-container"></div>
+      </div>
+      <div class="buttons-container">
+        <p>
+          <input
+            class="againButton"
+            type="button"
+            value="First page"
+            onClick="refresh(this)"
+          />
+        </p>
+        <p>
+          <input
+            class="againButton"
+            id="previous"
+            type="button"
+            value="Previous Page"
+          />
+        </p>
+        <p>
+          <input
+            class="againButton"
+            id="next"
+            type="button"
+            value="Next Page"
+          />
+        </p>
+      </div>
     </main>
-    <footer>
-      <p>
-        <input
-          class="againButton"
-          type="button"
-          value="Start"
-          onClick="refresh(this)"
-        />
-      </p>
-      <p>
-        <input
-          class="againButton"
-          id="previous"
-          type="button"
-          value="Previous Page"
-        />
-      </p>
-      <p>
-        <input class="againButton" id="next" type="button" value="Next Page" />
-      </p>
-    </footer>
+    <div class="pokeball1">
+      <img src="./src/pokeball-pokemon-svgrepo-com.svg" alt="" />
+    </div>
+    <div class="pokeball2">
+      <img src="./src/pokeball-pokemon-svgrepo-com.svg" alt="" />
+    </div>
     <script src="./index.js"></script>
   </body>
 </html>

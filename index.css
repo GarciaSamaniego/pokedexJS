@@ -1,27 +1,50 @@
 body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 62.5%;
   text-align: center;
-  background: rgb(149, 213, 178);
-  background: radial-gradient(
-    circle,
-    rgba(149, 213, 178, 1) 0%,
-    rgba(216, 243, 220, 1) 50%,
-    rgba(116, 198, 157, 1) 100%
-  );
 }
 
 h1 {
+  font-size: 3rem;
   color: #2d6a4f;
   width: 100%;
-  height: auto;
+  height: 1rem;
 }
+
+main {
+  font-family: 'Raleway', sans-serif;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(to right top, #65df8ed7, #90eb6c);
+}
+
+.glass {
+  margin-top: 4rem;
+  height: auto;
+  background-color: white;
+  background: linear-gradient(
+    to right bottom,
+    rgba(255, 255, 255, 0.7),
+    rgba(255, 255, 255, 0.3)
+  );
+  border-radius: 2rem;
+  z-index: 2;
+  backdrop-filter: blur(.5rem);
+}
+
 #pokeSearch {
   text-align: center;
   font-size: 15px;
   width: 60%;
-  height: 40px;
+  height: 10px;
   border-radius: 10px;
   padding: 10px;
-  margin: 30px 30px;
+  margin: 1rem;
   background-color: white;
   box-shadow: 0 3px 15px rgba(100, 100, 100, 0.5);
 }
@@ -35,23 +58,13 @@ h1 {
   margin: 0 auto;
 }
 
-@media (min-width: 500px) {
-  .pokemon-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 30px;
-    width: 80%;
-    margin: 10px auto;
-    height: auto;
-  }
-  .stats {
-    font-size: 24px;
-  }
-  #pokeSearch {
-    width: 70%;
-    height: 50px;
-    font-size: 24px;
-  }
+p {
+  font-size: 2rem;
+}
+
+input {
+  border: none;
+  font-size: 1rem;
 }
 
 .pokemon-block {
@@ -59,6 +72,11 @@ h1 {
   padding: 10px;
   margin: 30px 30px;
   background-color: white;
+  background: linear-gradient(
+    to left top,
+    rgba(255, 255, 255, 0.9),
+    rgba(255, 255, 255, 0.4)
+  );
   box-shadow: 0 3px 15px rgba(100, 100, 100, 0.5);
 }
 
@@ -79,30 +97,52 @@ h1 {
   border-radius: 10px;
   padding: 10px;
   background-color: white;
+  background: linear-gradient(
+    to left top,
+    rgba(255, 255, 255, 0.8),
+    rgba(255, 255, 255, 0.5)
+  );
   box-shadow: 0 3px 15px rgba(100, 100, 100, 0.5);
   width: auto;
   height: 40px;
 }
-footer {
+.buttons-container {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 10px;
   width: auto;
   margin: 5px auto;
+  margin-bottom: 30px;
   height: 10vh;
+}
+
+.pokeball1,
+.pokeball2 {
+  height: 15rem;
+  width: 15rem;
+  position: absolute;
+  border-radius: 50%;
+}
+.pokeball1 {
+  top: 5%;
+  right: 5%;
+}
+.pokeball2 {
+  bottom: 1%;
+  left: 5%;
 }
 
 /* Estilos para colocar el icono del tipo de cada pokemon*/
 .iconContainer {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  width: 40px;
+  width: 4rem;
   margin: 0 auto;
   justify-content: center;
 }
 .icon {
-  width: 40px;
-  height: 40px;
+  width: 3rem;
+  height: 3rem;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -172,4 +212,23 @@ footer {
 }
 .steel {
   background-image: url(/src/typesIcon/Steeltype.png);
+}
+
+@media (min-width: 500px) {
+  .pokemon-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 30px;
+    width: 100%;
+    height: 80%;
+    margin: 10px auto;
+  }
+  .stats {
+    font-size: 24px;
+  }
+  #pokeSearch {
+    width: 70%;
+    height: 30px;
+    font-size: 24px;
+  }
 }

@@ -1,7 +1,6 @@
 const pokemonContainer = document.querySelector(".pokemon-container");
 const previous = document.querySelector("#previous");
 const next = document.querySelector("#next");
-// const pokeSearch = document.querySelector("#pokeSearch");
 let offset = 1;
 let limit = 2;
 
@@ -87,10 +86,10 @@ function createPokemon(pokemon) {
     typeContainer.appendChild(pokemonType2);
   }
 
-  for (let k = 0; k <= 6; k++) {
+  for (let k = 0; k <= 2; k++) {
     const stats = document.createElement("p");
     stats.classList.add("stats");
-    stats.textContent = `${pokemon.stats[k].stat.name}: ${pokemon.stats[k].base_stat}`;
+    stats.textContent = `${pokemon.stats[k].stat.name.toUpperCase()}: ${pokemon.stats[k].base_stat}`;
     card.appendChild(stats);
   }
 
